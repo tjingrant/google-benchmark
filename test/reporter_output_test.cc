@@ -23,6 +23,7 @@ static int AddContextCases() {
            {{"^\\{", MR_Default},
             {"\"context\":", MR_Next},
             {"\"date\": \"", MR_Next},
+            {"\"host_name\":", MR_Next},
             {"\"executable\": \".*(/|\\\\)reporter_output_test(\\.exe)?\",",
              MR_Next},
             {"\"num_cpus\": %int,$", MR_Next},
@@ -533,7 +534,7 @@ ADD_CASES(TC_ConsoleOut, {{"^BM_UserStats/iterations:5/repeats:3/manual_time [ "
                           {"^BM_UserStats/iterations:5/repeats:3/"
                            "manual_time_median [ ]* 150 ns %time [ ]*3$"},
                           {"^BM_UserStats/iterations:5/repeats:3/"
-                           "manual_time_stddev [ ]* 0 ns %time [ ]*3$"},
+                           "manual_time_stddev [ ]* 0.000 ns %time [ ]*3$"},
                           {"^BM_UserStats/iterations:5/repeats:3/manual_time_ "
                            "[ ]* 150 ns %time [ ]*3$"}});
 ADD_CASES(
